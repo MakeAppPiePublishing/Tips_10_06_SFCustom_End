@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_0_06_FSSymbol" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="pie.fill" translatesAutoresizingMaskIntoConstraints="NO" id="Hzp-P0-sRq">
+                                <rect key="frame" x="127" y="353" width="17" height="16"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="medium" weight="medium">
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                </preferredSymbolConfiguration>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="zcf-yd-qLP">
+                                <rect key="frame" x="10" y="469" width="394" height="32"/>
+                                <segments>
+                                    <segment title="Small"/>
+                                    <segment title="Medium"/>
+                                    <segment title="Large"/>
+                                </segments>
+                                <connections>
+                                    <action selector="sizeChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="BlI-o6-Mce"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="LAZ-vq-F7Y">
+                                <rect key="frame" x="10" y="631" width="394" height="32"/>
+                                <segments>
+                                    <segment title="Body"/>
+                                    <segment title="Headline"/>
+                                    <segment title="Title1"/>
+                                    <segment title="LargeTitle"/>
+                                </segments>
+                                <connections>
+                                    <action selector="fontChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="iFB-te-wN9"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pie SF Symbol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHv-yG-ZMD">
+                                <rect key="frame" x="152" y="350.5" width="110" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cHv-yG-ZMD" firstAttribute="leading" secondItem="Hzp-P0-sRq" secondAttribute="trailing" constant="8" id="1Nq-Pl-idF"/>
+                            <constraint firstItem="zcf-yd-qLP" firstAttribute="top" secondItem="Hzp-P0-sRq" secondAttribute="bottom" constant="100" id="71y-gQ-8r0"/>
+                            <constraint firstItem="LAZ-vq-F7Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Eml-1w-ayw"/>
+                            <constraint firstItem="cHv-yG-ZMD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HaT-FP-9t5"/>
+                            <constraint firstItem="Hzp-P0-sRq" firstAttribute="top" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="309" id="OiG-Va-8sW"/>
+                            <constraint firstItem="LAZ-vq-F7Y" firstAttribute="top" secondItem="zcf-yd-qLP" secondAttribute="bottom" constant="131" id="RAt-mf-Pvs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LAZ-vq-F7Y" secondAttribute="bottom" constant="200" id="bXy-Vg-DiI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zcf-yd-qLP" secondAttribute="trailing" constant="10" id="bio-1P-ESo"/>
+                            <constraint firstItem="zcf-yd-qLP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="ccK-EF-9aJ"/>
+                            <constraint firstItem="cHv-yG-ZMD" firstAttribute="centerY" secondItem="Hzp-P0-sRq" secondAttribute="centerY" id="mke-EI-k4b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LAZ-vq-F7Y" secondAttribute="trailing" constant="10" id="sim-pv-aU3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="cHv-yG-ZMD" id="vct-Kr-5Qu"/>
+                        <outlet property="sfSymbol" destination="Hzp-P0-sRq" id="0bw-g4-Lkr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="127"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pie.fill" width="17" height="16"/>
+    </resources>
+</document>
